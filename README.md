@@ -15,6 +15,16 @@ Development branch for the Telodynamic website redesign.
 - No unverified certifications, customer counts, years, technical specifications or regulatory claims are included.
 - The existing Telodynamic Formspree endpoint is retained on the Contact page.
 
+## Safe client preview
+
+Review: https://telodynamic-client-preview.vercel.app/
+
+The preview is hosted in the separate Vercel project `telodynamic-client-preview` under Raja's account. No custom domain or upstream repository connection is configured. `telodynamic.com` remains untouched.
+
+Run `node tools/build-preview.cjs` to stage public files in `_preview/`. The preview excludes `CNAME`, blocks search indexing with robots.txt, HTML metadata and an HTTP header, and leaves production canonical URLs intact. Deploy only this staged directory to the separate preview project. Never enable GitHub Pages on the fork while its production CNAME is present.
+
+See `CLIENT_REVIEW.md` for the review scope, QA evidence and launch prerequisites. The contact form uses the verified existing endpoint; browser QA uses intercepted responses and does not verify mailbox delivery.
+
 ## Finalisation checklist
 1. Replace all placeholder imagery with client-approved assets.
 2. Verify service/product wording and approved company/founder information with Pavan.
