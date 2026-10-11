@@ -12,7 +12,7 @@ Review branch: `rajasatyavardhan/mysite`, `telodynamic-v2`.
 - About: focused company positioning and an interactive service-discussion process without invented founder credentials or company metrics.
 - Contact: verified phone, email and Formspree endpoint; enquiry preselection; accessible form labels; success/error feedback with input retained after errors.
 
-The navy/cyan/white/steel design is retained. Stock imagery is visibly temporary and does not depict Telodynamic equipment. The hot-cell drawing is educational, not a product design or technical specification.
+The navy/cyan/white/steel design is retained. Locally optimized photography now shows real remote-handling, hot-cell, shielding and precision-manipulation applications, with source attribution and licenses at `/image-credits/`. The four working Home images from the original website are retained in the About engineering-context gallery. Product photography illustrates industry applications rather than identifying Telodynamic products. Placeholder labels have been removed. The hot-cell drawing is educational, not a product design or technical specification.
 
 ## QA
 
@@ -20,14 +20,14 @@ Five pages tested at 320, 390, 768, 1024 and 1440 px widths: no horizontal overf
 
 Page titles, descriptions, canonical URLs, social metadata, sitemap and legacy redirects reviewed. The separate preview blocks indexing and excludes CNAME. Upstream main and the fork's main were not changed.
 
-Automated axe-core scans at phone and desktop sizes found no reported violations after fixes. Gradient and image backgrounds require manual contrast review; this is a review check, not an accessibility certification. Hero text uses a strengthened navy overlay, and temporary-image captions use an opaque navy background.
+Automated axe-core scans at phone and desktop sizes found no reported violations after fixes. Gradient and image backgrounds require manual contrast review; this is a review check, not an accessibility certification. Hero text uses a strengthened navy overlay, and application-image captions use an opaque navy background.
 
 ## Before live release
 
-1. Replace temporary photos with approved equipment photography.
+1. Review the application photographs; Telodynamic equipment photographs can replace them when available.
 2. Confirm public service/product wording and the proposed process with Pavan. Add company/founder information only if supplied and approved.
 3. Confirm technical data before publishing any dimensions, materials, ratings, certifications or compliance statements.
 4. Coordinate a real Formspree delivery test and confirm receipt.
-5. Approve the review branch before opening or merging an upstream pull request.
+5. Approve the review branch before merging upstream pull request https://github.com/Telodynamic/mysite/pull/1.
 
-No upstream pull request, domain change or live-site release is part of this handoff.
+The upstream pull request is open and unmerged. The old site is preserved on the fork branch `original-site-backup-2026-10-10` at commit `4d1fdfe925701deb752003aea3657a82cde48563`. No domain change or live-site release is part of this imagery update.

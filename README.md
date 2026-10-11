@@ -11,7 +11,7 @@ Development branch for the Telodynamic website redesign.
 
 ## Development notes
 - Existing `CNAME` is intentionally preserved for the eventual upstream merge.
-- Temporary external imagery is marked in the UI and must be replaced with approved Telodynamic equipment photography before production sign-off.
+- Real industry application photographs are stored locally as optimized WebP files. Sources, attribution and licenses are published at `/image-credits/`. Product images illustrate applications rather than identifying Telodynamic equipment.
 - No unverified certifications, customer counts, years, technical specifications or regulatory claims are included.
 - The existing Telodynamic Formspree endpoint is retained on the Contact page.
 
@@ -26,9 +26,9 @@ Run `node tools/build-preview.cjs` to stage public files in `_preview/`. The pre
 See `CLIENT_REVIEW.md` for the review scope, QA evidence and launch prerequisites. The contact form uses the verified existing endpoint; browser QA uses intercepted responses and does not verify mailbox delivery.
 
 ## Finalisation checklist
-1. Replace all placeholder imagery with client-approved assets.
+1. Review the industry application photography and replace it with Telodynamic equipment assets when available.
 2. Verify service/product wording and approved company/founder information with Pavan.
 3. Test Formspree delivery and mobile layouts.
 4. Run Lighthouse accessibility/performance checks.
 5. Review SEO metadata, social preview image and legal pages if required.
-6. Open a PR back to `Telodynamic/mysite` only after client review.
+6. Review and approve upstream PR https://github.com/Telodynamic/mysite/pull/1 before merging. The old website is preserved on the fork branch `original-site-backup-2026-10-10`.

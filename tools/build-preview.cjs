@@ -3,14 +3,14 @@ const fs = require('node:fs'), path = require('node:path');
 const root = path.resolve(__dirname, '..'), output = path.join(root, '_preview');
 fs.mkdirSync(output, { recursive: true });
 const files = ['index.html', '404.html', 'services.html', 'products.html', 'style.css', 'sitemap.xml'];
-for (const dir of ['about', 'contact', 'products', 'services', 'assets']) {
+for (const dir of ['about', 'contact', 'products', 'services', 'image-credits', 'assets']) {
   function walk(base) { for (const e of fs.readdirSync(path.join(root, base), { withFileTypes: true })) { const rel = path.join(base, e.name); if (e.isDirectory()) walk(rel); else files.push(rel); } }
   walk(dir);
 }
 if (fs.existsSync(path.join(output, 'CNAME'))) throw new Error('Preview directory contains CNAME. Use a fresh preview directory.');
 for (const file of files) {
-  let content = fs.readFileSync(path.join(root, file), 'utf8');
-  if (file.endsWith('.html')) content = content.replace('</head>', '<meta name="robots" content="noindex, nofollow"></head>');
+  let content = fs.readFileSync(path.join(root, file));
+  if (file.endsWith('.html')) content = content.toString('utf8').replace('</head>', '<meta name="robots" content="noindex, nofollow"></head>');
   fs.mkdirSync(path.dirname(path.join(output, file)), { recursive: true });
   fs.writeFileSync(path.join(output, file), content);
 }
